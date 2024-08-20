@@ -1,0 +1,40 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 20px auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white; /* Set only the headings (h2) to white */
+}
+
+/* Specifically target the Health Declaration label */
+.health-declaration-label {
+    color: white; /* Set the Health Declaration label to white */
+}
+
+input, select, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: black; /* Keep input text black */
+    background-color: white; /* Keep input background white */
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+    button:hover {
+        background-color: #0056b3;
+    }
