@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). This project is a form made for individuals interested in visiting Mars. The form asks to collect various details and preferences from applicants.
 
+Live link: https://mars-form.vercel.app/
+
 ## Getting Started
 
 First, run the development server:
