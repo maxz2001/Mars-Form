@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const HealthAndSafety = ({ formData, handleChange, prevStep, handleSubmit }) => {
+    const [isSubmitEnabled, setIsSubmitEnabled] = useState(false);
+
+    useEffect(() => {
+        const isFormValid = formData.healthDeclaration &&
+                            formData.emergencyContact;
+
+        setIsSubmitEnabled(isFormValid);
+    }, [formData]);
+
     return (
         <div>
             <h2>Health and Safety</h2>
             <form>
-                <label className="health-declaration-label">
+                <label className="white-label">
                     Health Declaration
                     <select
                         value={formData.healthDeclaration}
@@ -32,7 +41,7 @@ const HealthAndSafety = ({ formData, handleChange, prevStep, handleSubmit }) => 
                 <button type="button" onClick={prevStep}>
                     Previous
                 </button>
-                <button type="button" onClick={handleSubmit}>
+                <button type="button" onClick={handleSubmit} disabled={!isSubmitEnabled}>
                     Submit
                 </button>
             </form>
